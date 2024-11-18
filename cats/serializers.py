@@ -1,4 +1,5 @@
 # import webcolors
+# from djoser.serializers import UserSerializer
 from rest_framework import serializers
 
 import datetime as dt
@@ -92,3 +93,9 @@ class OwnerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Owner
         fields = ('first_name', 'last_name', 'cats')
+
+
+# class CustomUserSerializer(UserSerializer):
+#     class Meta:
+#         model = User
+#         fields = ('email', 'id', 'username', 'first_name', 'last_name')
